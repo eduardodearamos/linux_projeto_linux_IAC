@@ -1,0 +1,25 @@
+#! /bin/bash
+echo "CRIANDO DIRETORIOS PARA ATIVIDADE DA DIO"
+
+mkdir /publico
+mkdir /adm
+mkdir /ven
+mkdir /sec
+
+echo "diretorios criado"
+
+echo "CRIANDO GRUPOS DE USUARIOS"
+
+groupadd GRP_ADM
+groupadd GRP_VEN
+groupadd GRP_SEC
+
+echo "GRUPOS DE USUARIOS CRIADOS"
+
+echo "CRIANDO USUARIOS E ABILITANDO SENHA PADRÃO PARA TODOS OS USUARUIS COMO  (SENHA 1234)"
+
+useradd carlos -m-s /bin/bash -p $(openssl passwd -crypt Senha 1234)
+
+
+
+useradd carlos -m-s /bin/bash -p $(openssl passwd -crypt Senha 123
